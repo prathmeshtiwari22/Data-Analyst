@@ -1,0 +1,51 @@
+--Select Jobtitle ,avg(Salary) from EmployeeDemo inner join EmployeeSalary on EmployeeDemo.EmployeeId = EmployeeSalary.EmployeeId
+----where JobTitle='Salesman' Group by JobTitle
+--CREATE TABLE EMPLOYEEDEMO1(
+--EmployeeId int,
+--FirstName varchar(50),
+--LastName varchar(50),
+--Age int,
+--Gneder varchar(50)
+----);
+--Insert into EmployeeDemo1 values(1011,'Ross','Taylor',39,'Male'),(1012,'Travis','Head',30,'Male');
+--Select * from EmployeeDemo Union All Select * from EmployeeDemo1
+--SELECT 
+--    EmployeeId,
+--    FirstName,
+--    LastName,
+--    Age,
+--    CASE 
+--        WHEN Age > 30 THEN 'OLD'
+--        ELSE 'YOUNG'
+--    END AS AgeCategory
+--FROM EmployeeDemo
+--WHERE Age IS NOT NULL
+--Order BY EmployeeId;
+
+
+--Select 
+--	FirstName,
+--	LastName,
+--	Age,
+--	CASE 
+--		when Age > 30 then 'OLD'
+--		when Age<29 and Age>26 then 'YOUNG'
+--		else 'BABY'
+--	END AS AgeCategory
+--from EmployeeDemo
+--where Age is not NULL
+--order by Age
+
+--SELECT 
+--    FirstName,
+--    LastName,
+--    JobTitle,
+--    Salary,
+--    CASE 
+--        WHEN JobTitle = 'Salesman' THEN Salary + (Salary * 0.10)
+--        WHEN JobTitle = 'Engineer' THEN Salary - (Salary * 0.90)
+--        ELSE Salary + (Salary * 0.10)
+--    END AS AdjustedSalary
+--FROM EmployeeDemo 
+--INNER JOIN EmployeeSalary 
+--ON EmployeeDemo.EmployeeId = EmployeeSalary.EmployeeId;
